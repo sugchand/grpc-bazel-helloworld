@@ -45,10 +45,15 @@ This example is copied from the official grpc website. The bazel build system is
 ```
     bazel run //:gazelle
 ```
+
 * Use go modules to keep track of the version in bazel.Bazel can generate WORKSPACE and BUILD files using go.mod files
 ```
     bazel run //:gazelle -- update-repos -from_file=go.mod
- ```
+```
 
+* To let the editor intellisense to work on bazel workspace, user may need to do the following.
+```
+   bazel build gopath
+```
 
 
